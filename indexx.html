@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <!-- for tailwind -->
+ <script src="https://cdn.tailwindcss.com"></script>
+ <!-- font -->
+ <link rel="import" href="@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;500;600&display=swap');">
+  <!--font-family: 'Work Sans', sans-serif;  -->
+ <title>Order</title>
+<!-- for dark mode -->
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {},
+      },
+    };
+  </script>
+  <!-- end -->
+</head>
+<body  class="dark:bg-gray-800 bg-white">
+      <!-- Dark mode switcher -->
+      <button
+      id="theme-toggle"
+      type="button"
+      class=" fixBtn lg:mt-[75px] lg:ml-[75px] md:ml-[30px] mt-[65px] ml-[17px] text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-1.5"
+    >
+      <svg
+        id="theme-toggle-dark-icon"
+        class="w-5 h-5 hidden"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"
+        ></path>
+      </svg>
+      <svg
+        id="theme-toggle-light-icon"
+        class="w-5 h-5 hidden"
+        fill="currentColor"
+        viewBox="0 0 20 20"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z"
+          fill-rule="evenodd"
+          clip-rule="evenodd"
+        ></path>
+      </svg>
+    </button>
+    <!-- Dark mode switcher end -->
+    <section class="py-10 lg:px-10 xl:px-10 2xl:px-10 md:px-6 px-4  ">
+        <!-- your-order -->
+        <div class="p-4">
+            <div class="container mx-auto w-full">
+            <h1 class="font-sans leading-9 lg:text-4xl md:text-3xl text-2xl text-gray-800 font-semibold dark:text-white">Your Orders</h1>
+            <p class=" font-sans font-normal text-base text-gray-800 lg:leading-9 md:leading-9 leading-6 dark:text-white">Check the status of recent orders, manage returns, and discover similar products.</p>  
+            <div class="flex lg:justify-between md:justify-between justify-start lg:items-center md:items-center items-start mb-4 lg:flex lg:flex-row md:flex md:flex-row flex flex-col ">
+            <p class="font-sans leading-10 text-lg text-gray-800 font-normal mt-2 dark:text-white">Order: &nbsp;<span class="font-sans leading-10 text-lg text-gray-800 font-semibold dark:text-white">#8564</span></p>       
+            <p class="font-sans leading-10 text-lg text-gray-800 font-normal mt-2 lg:mr-80 dark:text-white">Ordered on <span class="font-sans leading-10 text-lg text-gray-800 font-semibold dark:text-white">Sunday 21 March, 2021</span></p>       
+            <p class="font-sans leading-10 text-lg text-gray-800 font-normal mt-2 dark:text-white">Total Amount:&nbsp;<span class="font-sans leading-10 text-lg text-gray-800 font-semibold dark:text-white">$160.00</span></p>       
+        </div>
+        <!-- flex -->
+        <div class="border p-6 border-b-0 dark:border-gray-700 border">
+            <div class="lg:flex lg:flex-row md:flex md:flex-row flex flex-col ">
+            <img class="object-cover md:h-full md-w-full" src="./img/Rectangle 259.png" alt="..">
+            <!-- for medium screen -->
+             <div class="md:flex md:flex-col w-full">
+            <div class="lg:ml-16 md:ml-8 w-full">
+            <p class=" font-sans font-semibold lg:text-2xl md:text-2xl text-xl text-gray-800 leading-9 lg:mt-0 md:mt-0 mt-4 dark:text-white">Premium Leather Wrist Watch</p>  
+            <p class="font-sans leading-9 text-lg text-gray-800 font-normal dark:text-white">Color: <span class="font-sans leading-5 text-lg text-gray-800 font-semibold dark:text-white">Black</span></p>       
+            <p class=" font-sans font-semibold text-xl text-gray-800 leading-9 dark:text-white">$80.00</p>
+        </div>
+        <!-- ml-16 -->
+        <div class=" lg:flex lg:flex-col md:flex md:flex-row w-full">
+        <!-- button -->
+        <div class="flex lg:justify-end md:justify-end justify-center items-center w-full mt-8 lg:mt-0">
+            <button class=" flex items-center justify-start lg:px-20 py-4 md:px-10 px-20 bg-white  border-gray-800 border text-base font-medium leading-normal text-gray-800 dark:text-black dark:border-white">View Details </button>
+
+        </div>
+        <!-- button -->
+         <!-- button -->
+         <div class="flex lg:justify-end md:justify-end justify-center items-center w-full mt-4 md:mt-8 lg:mt-2">
+            <button class=" flex items-center justify-start lg:px-16 py-4 md:px-10 px-16 border-none  bg-gray-800  text-base font-medium leading-normal text-white dark:text-white dark:bg-white dark:text-black">Track Your Order</button>
+
+        </div>
+        <!-- button -->
+    </div>
+    <!-- lg:flex lg:flex-col md:flex md:flex-row w-full-->
+</div>
+<!-- md -->
+    </div>
+    <!-- flex -->
+        </div>
+        <!-- boder -->
+        <!-- <hr class="bg-border-gray-200"> -->
+        
+        <div class="border p-6 border-t border-gray-200 dark:border-gray-700 border">
+            <div class="lg:flex lg:flex-row md:flex md:flex-row flex flex-col ">
+            <img class="object-cover md:h-full md-w-full" src="./img/Rectangle 260.png" alt="..">
+            <!-- for medium screen -->
+             <div class="md:flex md:flex-col w-full">
+            <div class="lg:ml-16 md:ml-8 w-full">
+            <p class=" font-sans font-semibold text-2xl text-gray-800 leading-9 lg:mt-0 md:mt-0 mt-4 dark:text-white">Premium Leather Wrist Watch</p>  
+            <p class="font-sans leading-9 text-lg text-gray-800 font-normal dark:text-white">Color: <span class="font-sans leading-5 text-lg text-gray-800 font-semibold dark:text-white">Black</span></p>       
+            <p class=" font-sans font-semibold text-xl text-gray-800 leading-9 dark:text-white">$80.00</p>
+        </div>
+        <!-- ml-16 -->
+        <div class=" lg:flex lg:flex-col md:flex md:flex-row w-full">
+        <!-- button -->
+        <div class="flex lg:justify-end md:justify-end justify-center items-center w-full mt-8 lg:mt-0">
+            <button class=" flex items-center justify-start lg:px-20 py-4 md:px-10 px-20 bg-white  border-gray-800 border     text-base font-medium leading-normal text-gray-800 dark:text-white dark:text-black dark:border-white">View Details </button>
+
+        </div>
+        <!-- button -->
+         <!-- button -->
+         <div class="flex lg:justify-end md:justify-end justify-center items-center w-full mt-4 md:mt-8 lg:mt-2 ">
+            <button class=" flex items-center justify-start lg:px-16 py-4 md:px-10 px-16 border-none  bg-gray-800  text-base font-medium leading-normal text-white dark:text-white dark:bg-white dark:text-black">Track Your Order</button>
+
+        </div>
+        <!-- button -->
+    </div>
+    <!--lg:flex lg:flex-col md:flex md:flex-row w-full -->
+</div>
+<!-- md -->
+    </div>
+    <!-- flex -->
+        </div>
+        <!-- boder -->
+
+       <!-- order-place-area -->
+       <!-- background -->
+       <div class="bg-gray-50 dark:bg-gray-800 dark:border-gray-700 border">
+        <div class="flex justify-between items-center p-6 w-full">
+            <p class=" font-sans font-medium text-xl text-gray-600 leading-9 inline-flex dark:text-white">Order Placed  &nbsp;&nbsp; <svg class="mt-2" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 19.9936C15.5228 19.9936 20 15.5194 20 10.0002C20 4.48098 15.5228 0.00676727 10 0.00676727C4.47715 0.00676727 0 4.48098 0 10.0002C0 15.5194 4.47715 19.9936 10 19.9936Z" fill="#34D399"/>
+                <path d="M9.1984 15.3157L4.47028 11.6323L5.81465 9.90699L8.71809 12.1689L13.51 5.25418L15.3081 6.49981L9.1984 15.3157Z" fill="white"/>
+                </svg></p>  
+        
+                <p class=" font-sans font-medium text-xl text-gray-600 leading-9 lg:block md:block hidden dark:text-white">Dispatched</p>  
+                <p class=" font-sans font-medium text-xl text-gray-600 leading-9 lg:block md:block hidden dark:text-white">Shipped</p>  
+                <p class=" font-sans font-medium text-xl text-gray-600 leading-9 lg:block md:block hidden dark:text-white">Delivered</p>  
+
+               
+        </div>
+        <!-- flex -->
+        <div class="p-6">
+        <div class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700 ">
+            <div class="bg-gray-900 h-2.5 rounded-full w-1/4" ></div>
+            </div>
+          <!-- w-full bg-gray-200 h-2 p-6 -->
+          <p class="font-sans leading-10 text-base text-gray-600 font-normal mt-2 dark:text-white">Preparing to ship on <span class="font-sans leading-10 text-base text-gray-600 font-semibold dark:text-white">Monday 24 March 2021</span></p>       
+        </div>
+        <!-- p-6 -->
+          <!-- end-order-place-area -->
+
+        </div>
+        <!-- background -->
+        </div>
+        <!--container -->
+             </div>
+            <!-- p-4 -->
+    </section>
+    <!--section-end -->
+ 
+     
+<!-- FOR DARK MODE SCRIPT -->
+<script>
+    // It's best to inline this in `head` to avoid FOUC (flash of unstyled content) when changing pages or themes
+    if (
+      localStorage.getItem('color-theme') === 'dark' ||
+      (!('color-theme' in localStorage) &&
+        window.matchMedia('(prefers-color-scheme: dark)').matches)
+    ) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+    var themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+var themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+
+// Change the icons inside the button based on previous settings
+if (localStorage.getItem('color-theme') === 'dark' || (!('color-theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+themeToggleLightIcon.classList.remove('hidden');
+} else {
+themeToggleDarkIcon.classList.remove('hidden');
+}
+
+var themeToggleBtn = document.getElementById('theme-toggle');
+
+themeToggleBtn.addEventListener('click', function() {
+
+// toggle icons inside button
+themeToggleDarkIcon.classList.toggle('hidden');
+themeToggleLightIcon.classList.toggle('hidden');
+
+// if set via local storage previously
+if (localStorage.getItem('color-theme')) {
+    if (localStorage.getItem('color-theme') === 'light') {
+        document.documentElement.classList.add('dark');
+        localStorage.setItem('color-theme', 'dark');
+    } else {
+        document.documentElement.classList.remove('dark');
+        localStorage.setItem('color-theme', 'light');
+    }
+
+// if NOT set via local storage previously
+} else {
+    if (document.documentElement.classList.contains('dark')) {
+        document.documentElement.classList.remove('dark');
+        localStorage.setItem('color-theme', 'light');
+    } else {
+        document.documentElement.classList.add('dark');
+        localStorage.setItem('color-theme', 'dark');
+    }
+}
+
+});
+  </script>
+  <!-- END -->
+
+</body>
+</html>
